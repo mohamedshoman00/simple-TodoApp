@@ -25,10 +25,12 @@ const TodoInput = (props) => {
     <>
       <form
         onSubmit={SubmitHandler}
-        className="form__input d-flex flex-row mt-3"
+        // className="form__input d-flex flex-row mt-3"
+        className="container d-flex justify-content-center align-items-center"
+        style={{ marginTop: "20px" }}
       >
-        <div className="container d-flex justify-content-flex-start flex-column">
-          <div className="container d-flex justify-content-flex-start">
+        <div className="container">
+          <div className="container">
             <input
               className="styleHover"
               id="outlined-basic"
@@ -36,7 +38,7 @@ const TodoInput = (props) => {
               variant="outlined"
               ref={value}
               style={{
-                width: 360,
+                width: "100%",
                 height: 50,
                 borderRadius: 20,
                 paddingLeft: 15,
@@ -50,10 +52,11 @@ const TodoInput = (props) => {
         <button
           className="btn btn-outline-success"
           style={{
-            width: 150,
-            height: 50,
+            width: "30%",
+            // height: 50,
             borderRadius: 20,
             boxShadow: "0 0 4px #808080",
+            padding: "10px",
           }}
         >
           Add Task

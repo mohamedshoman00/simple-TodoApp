@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 const TodoEdit = (props) => {
   const [todo, setTodo] = useState({ id: 0, text: "", isComplete: false });
@@ -39,10 +39,16 @@ const TodoEdit = (props) => {
   return (
     <>
       <h3 className="text-center">Edit todo</h3>
-      <div className="d-flex justify-content-center align-items-center flex-column">
-        <form onSubmit={onsub} className="form__input d-flex flex-row mt-3">
-          <div className="container d-flex justify-content-flex-start flex-column">
-            <div className="container d-flex justify-content-flex-start">
+      <div
+        className="d-flex justify-content-center align-items-center flex-column"
+        style={{ marginTop: "50px" }}
+      >
+        <form
+          onSubmit={onsub}
+          className="container d-flex justify-content-center align-items-center"
+        >
+          <div className="container">
+            <div className="container">
               <input
                 className="styleHover"
                 id="outlined-basic"
@@ -52,7 +58,7 @@ const TodoEdit = (props) => {
                 value={todo.text}
                 onChange={handleChange}
                 style={{
-                  width: 360,
+                  width: "100%",
                   height: 50,
                   borderRadius: 20,
                   paddingLeft: 15,

@@ -4,7 +4,8 @@ const TodoList = (props) => {
   const nav = useNavigate();
   return (
     <>
-      <div className=" col-4 me-auto ms-auto mt-4">
+      {/* className=" col-4 me-auto ms-auto mt-4" */}
+      <div className="container ul-container" style={{ marginTop: "50px" }}>
         <ul className="list-group">
           {props.todos.map((e, i) => (
             <li
