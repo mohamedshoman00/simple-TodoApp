@@ -31,7 +31,7 @@ const TodoEdit = (props) => {
       // console.log(todo);
       // console.log(newtodo);
       // console.log(i);
-      newtodos[i] = { ...todo };
+      newtodos[i] = { ...todo, isComplete: false };
       props.setTodos(newtodos);
     }
     nav("/");
