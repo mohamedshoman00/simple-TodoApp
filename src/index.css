@@ -20,6 +20,22 @@ code {
 /* form {
   width: 80% !important;
 } */
+@media (max-width: 450px) {
+  ul li div .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+
+  ul li div .buttons button:first-child {
+    margin-right: 0 !important;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+}
+
 @media (min-width: 767px) {
 
   form,
@@ -27,6 +43,7 @@ code {
     width: 60% !important;
   }
 
+  ul li {}
 }
 
 @media (min-width: 992px) {
@@ -37,12 +54,3 @@ code {
   }
 
 }
-
-/* @media (min-width: 1192px) {
-
-  form,
-  .ul-container {
-    width: 50% !important;
-  }
-
-} */
