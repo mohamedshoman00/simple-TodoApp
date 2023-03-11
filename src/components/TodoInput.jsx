@@ -1,13 +1,13 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 const TodoInput = (props) => {
   const value = useRef();
+  const [to, SetTo] = useState("");
   const SubmitHandler = (event) => {
     event.preventDefault();
     if (value.current.value !== "") {
       const newTodo = [...props.todos];
       const lastele = newTodo.slice(-1);
       const index = lastele[0] === undefined ? 1 : lastele[0].id + 1;
-      console.log(lastele[0]);
       props.setTodos((prevState) => {
         return [
           ...prevState,
@@ -20,6 +20,12 @@ const TodoInput = (props) => {
         ];
       });
     }
+    SetTo("");
+  };
+  const ResetInput = (e) => {
+    let newto = to;
+    newto = e.target.value;
+    SetTo(newto);
   };
   return (
     <>
@@ -32,6 +38,8 @@ const TodoInput = (props) => {
         <div className="container">
           <div className="container">
             <input
+              onChange={ResetInput}
+              value={to}
               className="styleHover"
               id="outlined-basic"
               placeholder="What's need to be done?"
