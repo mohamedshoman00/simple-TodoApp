@@ -21,6 +21,10 @@ code {
   width: 80% !important;
 } */
 @media (max-width: 450px) {
+  body {
+    height: fit-content;
+  }
+
   ul li div .buttons {
     display: flex;
     flex-direction: column;
